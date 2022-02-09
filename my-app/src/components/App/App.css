@@ -36,3 +36,11 @@
     transform: rotate(360deg);
   }
 }
+
+.whosTurn {
+  text-align: center;
+}
+
+.gameOver {
+  text-align: center;
+}
