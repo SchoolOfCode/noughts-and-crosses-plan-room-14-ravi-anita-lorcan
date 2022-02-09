@@ -9,7 +9,7 @@ const Board = ({ board, makeAMove }) => {
   return (
     <div className="board">
     {board.map((symbol, i) => {
-      return <Square symbol={symbol} index={i} makeAMove={makeAMove} />
+      return <Square key={i} symbol={symbol} index={i} makeAMove={makeAMove} />
     })}
         
     </div>
