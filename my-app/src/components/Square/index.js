@@ -1,9 +1,15 @@
 import React from 'react'
+import "./index.css"
 
-const Square = () => {
+const Square = ({ symbol, index, makeAMove }) => {
+
+  function handleClick(index) {
+    makeAMove(index)
+  }
+
   return (
-    <div>
-        <p>Square</p>
+    <div className='square' onClick={() => handleClick(index)}>
+        <p className='symbol'>{symbol}</p>
     </div>
   )
 }

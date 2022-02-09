@@ -2,10 +2,16 @@ import React from 'react'
 import Square from '../Square'
 import "./index.css"
 
-const Board = () => {
+const Board = ({ board, makeAMove }) => {
+
+  console.log(board)
+
   return (
     <div className="board">
-        <Square />
+    {board.map((symbol, i) => {
+      return <Square symbol={symbol} index={i} makeAMove={makeAMove} />
+    })}
+        
     </div>
   )
 }
