@@ -4,7 +4,11 @@ import "./index.css"
 const Square = ({ symbol, index, makeAMove }) => {
 
   function handleClick(index) {
+   if(symbol === null){
     makeAMove(index)
+   }else{
+       console.log('error');
+   }
   }
 
   return (

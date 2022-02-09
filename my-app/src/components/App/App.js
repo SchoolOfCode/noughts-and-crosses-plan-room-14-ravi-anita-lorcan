@@ -5,11 +5,13 @@ import { useState } from "react"
 function App() {
 
   const [board, setBoard] = useState(["O", "X", null, null, null, null, null, null, null,])
-
+  const [playerOne,setPlayerOne] = useState(true)
   function makeAMove(index) {
-    setBoard([...board.slice(0, index), "X", ...board.slice(index + 1)])
+    const playerMove = playerOne ? "X" : "O";
+    setBoard([...board.slice(0, index), playerMove, ...board.slice(index + 1)])
+    setPlayerOne(!playerOne);
   }
-
+console.log(playerOne);
   return (
     <div>
         <Board board={board} makeAMove={makeAMove} ></Board>
