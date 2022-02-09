@@ -1,8 +1,10 @@
 import React from 'react'
 import Square from '../Square'
+import "./index.css"
+
 const Board = () => {
   return (
-    <div>
+    <div className="board">
         <Square />
     </div>
   )
